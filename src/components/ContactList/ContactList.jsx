@@ -11,7 +11,7 @@ function ContactList({ contacts, onDeleteContact }) {
       {contacts.map(contact => (
         <li key={contact.id} className={'contact__item'}>
           <span>{contact.name} {contact.number}</span>
-          <button className={"contact__button"} onClick={() => handleDeleteContact(contact.id)}>Delete</button>
+          <button className={'contact__button'} onClick={() => handleDeleteContact(contact.id)}>Delete</button>
         </li>
       ))}
     </ul>
@@ -21,6 +21,6 @@ function ContactList({ contacts, onDeleteContact }) {
 ContactList.propTypes = {
   contacts: PropTypes.any,
   onDeleteContact: any,
-}
+};
 
 export default ContactList;
