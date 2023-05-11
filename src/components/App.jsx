@@ -20,9 +20,7 @@ export const App = ()=>  {
 
   const handleAddContact = (name, number) => {
     const duplicateName = contacts.find(contact => contact.name === name);
-    const duplicateNumber = contacts.find(contact => contact.number === number);
-
-    if (duplicateName || duplicateNumber) {
+    if (duplicateName) {
       alert(`${name} is already in your contacts`);
     } else {
       const newContact = { id: nanoid(), name, number };
